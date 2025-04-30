@@ -3,7 +3,6 @@ import { Client } from 'discord.js';
 import { Bookmark } from './models/Bookmark';
 
 export function setupRoutes(app: Application, client: Client) {
-  // API route to manually add a bookmark (for testing or alternative integrations)
   app.post('/api/bookmarks', async (req, res) => {
     try {
       const { userId, linkedinUrl, title, description, thumbnailUrl } = req.body;
